@@ -20,4 +20,7 @@ public class Inscription implements Serializable {
     private long numInscription;
     @Column(name = "numSemaine")
     private int numSemaine;
+
+    @ManyToOne
+    private Cours cours;
 }

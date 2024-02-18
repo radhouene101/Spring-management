@@ -26,7 +26,6 @@ public class Abonnement {
     private Date dateFin;
     @Column(name = "prixAbon")
     private Float prixAbon;
-    @Column(name = "typeAbonnement")
+    @Enumerated(EnumType.STRING)
     private TypeAbonnement typeAbonnement;
-
 }

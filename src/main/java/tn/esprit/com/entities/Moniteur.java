@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -25,5 +26,7 @@ public class Moniteur {
     private String prenomM;
     @Column(name = "DateRecru")
     private Date dateRecru;
+    @OneToMany
+    private List<Cours> cours;
 
 }

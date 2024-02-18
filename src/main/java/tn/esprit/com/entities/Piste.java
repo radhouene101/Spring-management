@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,4 +23,6 @@ public class Piste implements Serializable {
     private String namePiste;
     @Enumerated(EnumType.STRING)
     private Color color;
+    @ManyToMany(mappedBy = "pistes")
+    private List<Skieur> skieurs;
 }

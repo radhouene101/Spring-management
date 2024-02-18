@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -27,5 +28,9 @@ public class Skieur {
     private Date dateNaissance;
     @Column(name = "ville")
     private String ville;
+    @ManyToMany
+    private List<Piste> pistes;
+    @OneToOne
+    private Abonnement abonnement;
 
 }
