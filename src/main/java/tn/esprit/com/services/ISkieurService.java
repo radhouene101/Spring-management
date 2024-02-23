@@ -12,6 +12,6 @@ public interface ISkieurService {
     void removeSkieur(Skieur ski);
     void removeSkieurById(Integer ski);
     Skieur retrieveSkieur(Integer idSkieur);
-    List<Skieur> retrieveAllSKieyr();
+    List<Skieur> retrieveAllSKieur();
 
 }

@@ -38,7 +38,7 @@ public class SkieurServiceImpl implements ISkieurService {
     }
 
     @Override
-    public List<Skieur> retrieveAllSKieyr() {
+    public List<Skieur> retrieveAllSKieur() {
         return skieurRepository.findAll();
     }
 }
