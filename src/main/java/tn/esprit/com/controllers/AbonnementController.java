@@ -24,11 +24,11 @@ public class AbonnementController {
     public Abonnement addAbonnement(@RequestBody Abonnement abn){
         return abonnementService.addAbonnement(abn);
     }
-    @PostMapping("/updateAbonnement/{id}")
-    public Abonnement updateAbonnement(@RequestBody Abonnement abn,@PathVariable Integer id){
+    @PostMapping("/updateAbonnement")
+    public Abonnement updateAbonnement(@RequestBody Abonnement abn){
         return abonnementService.updateAbonnementByID(abn);
     }
-    @DeleteMapping("/deleteAbonnement")
+    @DeleteMapping("/deleteAbonnement/{id}")
     public void deleteAbonnement(@PathVariable Integer id){
         abonnementService.removeAbonnementById(id);
     }
