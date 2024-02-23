@@ -34,7 +34,7 @@ public class SkieurServiceImpl implements ISkieurService {
 
     @Override
     public Skieur retrieveSkieur(Integer idSkieur) {
-        return skieurRepository.getReferenceById((long)idSkieur);
+        return skieurRepository.findById((long)idSkieur).get();
     }
 
     @Override
