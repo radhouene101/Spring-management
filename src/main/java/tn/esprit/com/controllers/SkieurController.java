@@ -30,4 +30,8 @@ public class SkieurController {
     public Skieur updateSkieurById(@RequestBody Skieur ski){
         return skieurService.updateSkieur(ski);
     }
+    @GetMapping("/get/{id}")
+    public Skieur getSkieurById(@PathVariable Integer id){
+        return skieurService.retrieveSkieur(id);
+    }
 }
