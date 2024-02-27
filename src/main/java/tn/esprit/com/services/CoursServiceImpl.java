@@ -18,12 +18,12 @@ public class CoursServiceImpl implements ICoursService{
 
     @Override
     public Cours updateCours(Cours cours) {
-        return null;
+        return coursRepository.save(cours);
     }
 
     @Override
     public Cours retrieveCoursById(Integer id) {
-        return null;
+        return coursRepository.findById((long)id).get();
     }
 
     @Override
@@ -31,13 +31,14 @@ public class CoursServiceImpl implements ICoursService{
         return null;
     }
 
+
     @Override
     public void removeCours(Cours cours) {
-
+        coursRepository.delete(cours);
     }
 
     @Override
     public void removeCoursById(Integer id) {
-
+        coursRepository.deleteById((long)id);
     }
 }
