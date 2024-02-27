@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Moniteur;
 import tn.esprit.com.repositories.MoniteurRepository;
 
- @Service
+import java.util.List;
+
+@Service
  @AllArgsConstructor
 public class MoniteurServiceImpl implements IMoniteurService{
 
@@ -23,6 +25,11 @@ public class MoniteurServiceImpl implements IMoniteurService{
     @Override
     public Moniteur retrieveMoniteurById(Integer id) {
         return moniteurRepository.findById((long)id).get();
+    }
+
+    @Override
+    public List<Moniteur> retrieveAllMoniteurs() {
+        return moniteurRepository.findAll();
     }
 
     @Override

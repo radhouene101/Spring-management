@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Inscription;
 import tn.esprit.com.repositories.InscriptionRepository;
 
+import java.util.List;
+
 
 @Service
 @AllArgsConstructor
@@ -29,6 +31,11 @@ public class InscriptionServiceImpl implements IInscriptionService{
     @Override
     public Inscription retrieveInscription(Inscription inscription) {
         return null;
+    }
+
+    @Override
+    public List<Inscription> retrieveAllInscriptions() {
+        return inscriptionRepository.findAll();
     }
 
     @Override

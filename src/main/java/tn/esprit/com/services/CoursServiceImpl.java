@@ -6,6 +6,8 @@ import tn.esprit.com.entities.Cours;
 import tn.esprit.com.repositories.AbonnementRepository;
 import tn.esprit.com.repositories.CoursRepository;
 
+import java.util.List;
+
 
 @Service
 @AllArgsConstructor
@@ -29,6 +31,11 @@ public class CoursServiceImpl implements ICoursService{
     @Override
     public Cours retrieveCours(Cours cours) {
         return null;
+    }
+
+    @Override
+    public List<Cours> retrieveAllCours() {
+        return coursRepository.findAll();
     }
 
 
