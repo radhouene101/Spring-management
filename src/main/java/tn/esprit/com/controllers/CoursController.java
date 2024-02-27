@@ -36,5 +36,8 @@ public class CoursController {
         return iCoursService.updateCours(cours);
     }
     @GetMapping("/get/{id}")
+    public Cours getCoursById(@PathVariable Integer id){
+      return iCoursService.retrieveCoursById(id);
+    }
 
 }
