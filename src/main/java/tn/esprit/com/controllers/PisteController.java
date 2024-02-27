@@ -31,4 +31,8 @@ public class PisteController {
     public Piste updatePiste(@RequestBody Piste piste){
         return iPisteService.updatePiste(piste);
     }
+    @GetMapping("/get/{id}")
+    public Piste getPisteById(Integer id){
+        return iPisteService.getPiste(id);
+    }
 }
