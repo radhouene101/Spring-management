@@ -32,4 +32,8 @@ public class AbonnementController {
     public void deleteAbonnement(@PathVariable Integer id){
         abonnementService.removeAbonnementById(id);
     }
+    @GetMapping("/get/{id}")
+    public Abonnement getAbonnementById(@PathVariable Integer id){
+        return abonnementService.retrieveAbonnement(id);
+    }
 }
