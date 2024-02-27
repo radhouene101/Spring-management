@@ -33,7 +33,7 @@ public class InscriptionController {
         return iInscriptionService.updateInscription(inscription);
     }
     @GetMapping("/get/{id}")
-    public Inscription getInscriptionById(Integer id){
+    public Inscription getInscriptionById(@PathVariable Integer id){
         return iInscriptionService.retrieveInscriptionById(id);
     }
 

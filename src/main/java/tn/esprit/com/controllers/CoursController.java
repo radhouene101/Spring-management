@@ -35,5 +35,6 @@ public class CoursController {
     public Cours updateCours(@RequestBody Cours cours){
         return iCoursService.updateCours(cours);
     }
+    @GetMapping("/get/{id}")
 
 }

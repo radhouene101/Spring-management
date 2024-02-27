@@ -32,7 +32,7 @@ public class PisteController {
         return iPisteService.updatePiste(piste);
     }
     @GetMapping("/get/{id}")
-    public Piste getPisteById(Integer id){
+    public Piste getPisteById(@PathVariable Integer id){
         return iPisteService.getPiste(id);
     }
 }
