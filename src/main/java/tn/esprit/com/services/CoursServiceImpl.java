@@ -4,15 +4,16 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Cours;
 import tn.esprit.com.repositories.AbonnementRepository;
+import tn.esprit.com.repositories.CoursRepository;
 
 
 @Service
 @AllArgsConstructor
 public class CoursServiceImpl implements ICoursService{
-    AbonnementRepository abonnementRepository;
+    CoursRepository coursRepository;
     @Override
     public Cours addCours(Cours cours) {
-        return abonnementRepository.save(cours);
+        return coursRepository.save(cours);
     }
 
     @Override
