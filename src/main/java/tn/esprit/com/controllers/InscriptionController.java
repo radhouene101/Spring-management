@@ -32,6 +32,10 @@ public class InscriptionController {
     public Inscription updateInscription(@RequestBody Inscription inscription){
         return iInscriptionService.updateInscription(inscription);
     }
+    @GetMapping("/get/{id}")
+    public Inscription getInscriptionById(Integer id){
+        return iInscriptionService.retrieveInscriptionById(id);
+    }
 
 
 }
