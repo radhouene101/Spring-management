@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import tn.esprit.com.entities.Skieur;
 import tn.esprit.com.services.ISkieurService;
 
+import java.util.List;
+
 @RestController
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PUBLIC)
@@ -33,5 +35,9 @@ public class SkieurController {
     @GetMapping("/get/{id}")
     public Skieur getSkieurById(@PathVariable Integer id){
         return skieurService.retrieveSkieur(id);
+    }
+    @PostMapping("/addMany")
+    public List<Skieur> addlist(@RequestBody List<Skieur> L){
+        return skieurService.ajoutListSkieur(L);
     }
 }
