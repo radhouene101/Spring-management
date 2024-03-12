@@ -1,6 +1,7 @@
 package tn.esprit.com.entities;
 
 public enum Color {
-Moudir,
+    BLUE,
+    PINK,
     VERT
 }

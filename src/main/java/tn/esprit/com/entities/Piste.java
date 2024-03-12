@@ -21,7 +21,9 @@ public class Piste implements Serializable {
     private long numPiste;
     @Column(name="namePiste")
     private String namePiste;
+
     @Enumerated(EnumType.STRING)
+    @Column(name = "color")
     private Color color;
     @ManyToMany(mappedBy = "pistes")
     private List<Skieur> skieurs;

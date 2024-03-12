@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.com.entities.Color;
 import tn.esprit.com.entities.Skieur;
 import tn.esprit.com.services.ISkieurService;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PUBLIC)
 @RequestMapping("api/skieur")
 public class SkieurController {
-    ISkieurService skieurService;
+    private final ISkieurService skieurService;
     @GetMapping("/getAllSkieurs")
     public Iterable<Skieur> getAllSkieur(){
         return  skieurService.retrieveAllSKieur();
@@ -39,5 +40,9 @@ public class SkieurController {
     @PostMapping("/addMany")
     public List<Skieur> addlist(@RequestBody List<Skieur> L){
         return skieurService.ajoutListSkieur(L);
+    }
+    @GetMapping("/{c}")
+    public List<Skieur> findByPisteColor(@PathVariable Color c){
+        return  skieurService.findBySkieurPisteColor(c);
     }
 }

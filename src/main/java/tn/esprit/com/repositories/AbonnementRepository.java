@@ -6,4 +6,5 @@ import tn.esprit.com.entities.Abonnement;
 
 @Repository
 public interface AbonnementRepository extends JpaRepository<Abonnement,Long> {
+
 }
