@@ -32,5 +32,7 @@ public class Skieur {
     private List<Piste> pistes;
     @OneToOne
     private Abonnement abonnement;
+    @OneToMany
+    private List<Inscription> inscriptions;
 
 }

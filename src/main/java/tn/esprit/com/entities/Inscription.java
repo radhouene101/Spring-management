@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Getter
@@ -20,7 +21,8 @@ public class Inscription implements Serializable {
     private long numInscription;
     @Column(name = "numSemaine")
     private int numSemaine;
-
     @ManyToOne
     private Cours cours;
+    @ManyToOne
+    private Skieur skieurs;
 }

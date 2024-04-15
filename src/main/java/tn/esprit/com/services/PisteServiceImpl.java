@@ -35,4 +35,5 @@ public class PisteServiceImpl implements IPisteService{
     public void removePisteById(Integer id){
         pisteRepository.deleteById((long)id);
     }
+
 }

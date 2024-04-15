@@ -13,4 +13,5 @@ public interface IAbonnementService {
     void removeAbonnementById(Integer abn);
     Abonnement retrieveAbonnement(Integer idAbn);
     List<Abonnement> retrieveAllAbonnements();
+
 }
