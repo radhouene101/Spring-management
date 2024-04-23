@@ -1,6 +1,8 @@
 package tn.esprit.com.services;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Cours;
 import tn.esprit.com.repositories.AbonnementRepository;
@@ -11,6 +13,7 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class CoursServiceImpl implements ICoursService{
     CoursRepository coursRepository;
     @Override
@@ -47,5 +50,9 @@ public class CoursServiceImpl implements ICoursService{
     @Override
     public void removeCoursById(Integer id) {
         coursRepository.deleteById((long)id);
+    }
+    @Scheduled(cron = "1/2 * * * * *")
+    public void test(){
+        log.info("test is running");
     }
 }
