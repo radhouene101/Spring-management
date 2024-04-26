@@ -62,7 +62,7 @@ public class AbonnementServiceImpl implements IAbonnementService{
     @Scheduled(fixedRate = 1000)
     public  void alertExpiresInSevenDays(){
         List<Abonnement> list = retrieveAbonnementExpiresInSevenDays(LocalDate.now().plusDays(7));
-        System.out.println(list.get(0));
+        //System.out.println(list.get(0));
         for (Abonnement abn : list){
             Skieur skieur = sk.findByAbonnement(abn);
             log.info(abn.getTypeAbonnement().toString()+"  working 1 item found   "+skieur.getNomS());
