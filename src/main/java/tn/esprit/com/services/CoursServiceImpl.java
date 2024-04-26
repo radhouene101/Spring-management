@@ -51,7 +51,7 @@ public class CoursServiceImpl implements ICoursService{
     public void removeCoursById(Integer id) {
         coursRepository.deleteById((long)id);
     }
-    @Scheduled(cron = "1/2 * * * * *")
+    //@Scheduled(cron = "1/2 * * * * *")
     public void test(){
         log.info("test is running");
     }

@@ -59,7 +59,7 @@ public class AbonnementServiceImpl implements IAbonnementService{
     public List<Abonnement> retrieveAbonnementExpiresInSevenDays(LocalDate date){
         return  abonnementRepository.findByDateFin(date);
     }
-    @Scheduled(fixedRate = 1000)
+    //@Scheduled(fixedRate = 1000)
     public  void alertExpiresInSevenDays(){
         List<Abonnement> list = retrieveAbonnementExpiresInSevenDays(LocalDate.now().plusDays(7));
         //System.out.println(list.get(0));
